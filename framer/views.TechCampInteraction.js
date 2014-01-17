@@ -96,48 +96,6 @@ window.FramerPS['TechCampInteraction'] = [
         ]
       },
       {
-        "name": "themes",
-        "layerFrame": {
-          "x": 640,
-          "y": 1136,
-          "width": 641,
-          "height": 528
-        },
-        "maskFrame": null,
-        "image": {
-          "path": "images/themes.png",
-          "frame": {
-            "x": 640,
-            "y": 1136,
-            "width": 641,
-            "height": 528
-          }
-        },
-        "imageType": "png",
-        "children": []
-      },
-      {
-        "name": "keyboard",
-        "layerFrame": {
-          "x": 640,
-          "y": 1664,
-          "width": 640,
-          "height": 434
-        },
-        "maskFrame": null,
-        "image": {
-          "path": "images/keyboard.png",
-          "frame": {
-            "x": 640,
-            "y": 1664,
-            "width": 640,
-            "height": 434
-          }
-        },
-        "imageType": "png",
-        "children": []
-      },
-      {
         "name": "talk4",
         "layerFrame": {
           "x": 640,
@@ -181,46 +139,46 @@ window.FramerPS['TechCampInteraction'] = [
         ]
       },
       {
-        "name": "saveTalk3",
+        "name": "talk3",
         "layerFrame": {
           "x": 0,
           "y": 552,
-          "width": 640,
-          "height": 216
-        },
-        "maskFrame": null,
-        "image": {
-          "path": "images/saveTalk3.png",
-          "frame": {
-            "x": 0,
-            "y": 552,
-            "width": 640,
-            "height": 216
-          }
-        },
-        "imageType": "png",
-        "children": []
-      },
-      {
-        "name": "talk3",
-        "layerFrame": {
-          "x": 640,
-          "y": 552,
-          "width": 640,
+          "width": 1280,
           "height": 216
         },
         "maskFrame": null,
         "image": {
           "path": "images/talk3.png",
           "frame": {
-            "x": 640,
+            "x": 0,
             "y": 552,
-            "width": 640,
+            "width": 1280,
             "height": 216
           }
         },
         "imageType": "png",
         "children": [
+          {
+            "name": "saveTalk3",
+            "layerFrame": {
+              "x": 0,
+              "y": 552,
+              "width": 640,
+              "height": 216
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/saveTalk3.png",
+              "frame": {
+                "x": 0,
+                "y": 552,
+                "width": 640,
+                "height": 216
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
           {
             "name": "voteBtn3",
             "layerFrame": {
@@ -307,6 +265,27 @@ window.FramerPS['TechCampInteraction'] = [
         },
         "imageType": "png",
         "children": [
+          {
+            "name": "doneVoteBtn1",
+            "layerFrame": {
+              "x": 1138,
+              "y": 199,
+              "width": 100,
+              "height": 93
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/doneVoteBtn1.png",
+              "frame": {
+                "x": 1138,
+                "y": 199,
+                "width": 100,
+                "height": 93
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
           {
             "name": "voteBtn1",
             "layerFrame": {
@@ -421,6 +400,49 @@ window.FramerPS['TechCampInteraction'] = [
             "y": 40,
             "width": 640,
             "height": 80
+          }
+        },
+        "imageType": "png",
+        "visible": false,
+        "children": []
+      },
+      {
+        "name": "themes",
+        "layerFrame": {
+          "x": 640,
+          "y": 1136,
+          "width": 641,
+          "height": 528
+        },
+        "maskFrame": null,
+        "image": {
+          "path": "images/themes.png",
+          "frame": {
+            "x": 640,
+            "y": 1136,
+            "width": 641,
+            "height": 528
+          }
+        },
+        "imageType": "png",
+        "children": []
+      },
+      {
+        "name": "keyboard",
+        "layerFrame": {
+          "x": 640,
+          "y": 1664,
+          "width": 640,
+          "height": 434
+        },
+        "maskFrame": null,
+        "image": {
+          "path": "images/keyboard.png",
+          "frame": {
+            "x": 640,
+            "y": 1664,
+            "width": 640,
+            "height": 434
           }
         },
         "imageType": "png",
