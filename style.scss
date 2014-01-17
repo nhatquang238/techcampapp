@@ -1,0 +1,29 @@
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	-webkit-user-select:none;
+}
+
+body {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFMzMzDBMatgEYWQAAABhJREFUeNpiYIADRjhgGNKCw8UfcAAQYACltADJ8fw9RwAAAABJRU5ErkJggg==);
+	font: 28px/1em "Helvetica";
+	color: #FFF;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-perspective: 1000px;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+div[name='app'] {
+	-webkit-transform: scale(0.5) !important;
+	   -moz-transform: scale(0.5) !important;
+	    -ms-transform: scale(0.5) !important;
+	     -o-transform: scale(0.5) !important;
+	        transform: scale(0.5) !important;
+	top: -526px;
+	left:-320px;
+}
