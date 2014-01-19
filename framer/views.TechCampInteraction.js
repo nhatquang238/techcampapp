@@ -4,9 +4,9 @@ window.FramerPS['TechCampInteraction'] = [
     "name": "app",
     "layerFrame": {
       "x": 0,
-      "y": 0,
+      "y": -26,
       "width": 1280,
-      "height": 2098
+      "height": 2124
     },
     "maskFrame": null,
     "children": [
@@ -116,6 +116,28 @@ window.FramerPS['TechCampInteraction'] = [
         "imageType": "png",
         "children": [
           {
+            "name": "SwitchView",
+            "layerFrame": {
+              "x": 761,
+              "y": 45,
+              "width": 398,
+              "height": 60
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/SwitchView.png",
+              "frame": {
+                "x": 761,
+                "y": 45,
+                "width": 398,
+                "height": 60
+              }
+            },
+            "imageType": "png",
+            "visible": false,
+            "children": []
+          },
+          {
             "name": "switchView",
             "layerFrame": {
               "x": 761,
@@ -126,7 +148,72 @@ window.FramerPS['TechCampInteraction'] = [
             "maskFrame": null,
             "children": [
               {
-                "name": "votingSwitch",
+                "name": "votingActive",
+                "layerFrame": {
+                  "x": 824,
+                  "y": 58,
+                  "width": 75,
+                  "height": 34
+                },
+                "maskFrame": null,
+                "image": {
+                  "path": "images/votingActive.png",
+                  "frame": {
+                    "x": 824,
+                    "y": 58,
+                    "width": 75,
+                    "height": 34
+                  }
+                },
+                "imageType": "png",
+                "visible": false,
+                "children": []
+              },
+              {
+                "name": "scheduleActive",
+                "layerFrame": {
+                  "x": 1002.5,
+                  "y": 58,
+                  "width": 113,
+                  "height": 34
+                },
+                "maskFrame": null,
+                "image": {
+                  "path": "images/scheduleActive.png",
+                  "frame": {
+                    "x": 1002.5,
+                    "y": 58,
+                    "width": 113,
+                    "height": 34
+                  }
+                },
+                "imageType": "png",
+                "visible": false,
+                "children": []
+              },
+              {
+                "name": "voting",
+                "layerFrame": {
+                  "x": 824,
+                  "y": 58,
+                  "width": 75,
+                  "height": 34
+                },
+                "maskFrame": null,
+                "image": {
+                  "path": "images/voting.png",
+                  "frame": {
+                    "x": 824,
+                    "y": 58,
+                    "width": 75,
+                    "height": 34
+                  }
+                },
+                "imageType": "png",
+                "children": []
+              },
+              {
+                "name": "votingBg",
                 "layerFrame": {
                   "x": 761,
                   "y": 45,
@@ -135,7 +222,7 @@ window.FramerPS['TechCampInteraction'] = [
                 },
                 "maskFrame": null,
                 "image": {
-                  "path": "images/votingSwitch.png",
+                  "path": "images/votingBg.png",
                   "frame": {
                     "x": 761,
                     "y": 45,
@@ -147,7 +234,28 @@ window.FramerPS['TechCampInteraction'] = [
                 "children": []
               },
               {
-                "name": "scheduleSwitch",
+                "name": "schedule",
+                "layerFrame": {
+                  "x": 1002.5,
+                  "y": 58,
+                  "width": 113,
+                  "height": 34
+                },
+                "maskFrame": null,
+                "image": {
+                  "path": "images/schedule.png",
+                  "frame": {
+                    "x": 1002.5,
+                    "y": 58,
+                    "width": 113,
+                    "height": 34
+                  }
+                },
+                "imageType": "png",
+                "children": []
+              },
+              {
+                "name": "scheduleBg",
                 "layerFrame": {
                   "x": 959,
                   "y": 45,
@@ -156,7 +264,7 @@ window.FramerPS['TechCampInteraction'] = [
                 },
                 "maskFrame": null,
                 "image": {
-                  "path": "images/scheduleSwitch.png",
+                  "path": "images/scheduleBg.png",
                   "frame": {
                     "x": 959,
                     "y": 45,
@@ -175,12 +283,96 @@ window.FramerPS['TechCampInteraction'] = [
         "name": "content",
         "layerFrame": {
           "x": 0,
-          "y": 40,
+          "y": -26,
           "width": 1280,
-          "height": 944
+          "height": 1010
         },
         "maskFrame": null,
         "children": [
+          {
+            "name": "timeline",
+            "layerFrame": {
+              "x": 0,
+              "y": -26,
+              "width": 640,
+              "height": 146
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/timeline.png",
+              "frame": {
+                "x": 0,
+                "y": -26,
+                "width": 640,
+                "height": 146
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
+          {
+            "name": "talk1full",
+            "layerFrame": {
+              "x": 0,
+              "y": 120,
+              "width": 640,
+              "height": 275
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/talk1full.png",
+              "frame": {
+                "x": 0,
+                "y": 120,
+                "width": 640,
+                "height": 275
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
+          {
+            "name": "talk2full",
+            "layerFrame": {
+              "x": 0,
+              "y": 395,
+              "width": 640,
+              "height": 275
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/talk2full.png",
+              "frame": {
+                "x": 0,
+                "y": 395,
+                "width": 640,
+                "height": 275
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
+          {
+            "name": "talk3full",
+            "layerFrame": {
+              "x": 0,
+              "y": 670,
+              "width": 640,
+              "height": 275
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/talk3full.png",
+              "frame": {
+                "x": 0,
+                "y": 670,
+                "width": 640,
+                "height": 275
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
           {
             "name": "searchBar",
             "layerFrame": {

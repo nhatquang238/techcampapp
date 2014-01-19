@@ -23,3 +23,9 @@ div[name="app"] {
   transform: scale(0.5) !important;
   top: -524px;
   left: -160px; }
+
+div[name="voteBtn1"], div[name="doneVoteBtn1"],
+div[name="talk3"], div[name="searchLabel"],
+div[id="34"], div[name="cancelSearch"],
+div[name="switchView"] {
+  cursor: pointer; }
