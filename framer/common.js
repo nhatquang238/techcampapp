@@ -12,7 +12,7 @@ for (var layerGroupName in PSD) {
 // set default animation function
 View.prototype.animateDefault = function (props) {
 	this.animate({
-		time: 300,
+		time: 200,
 		curve: 'spring(400,30,200)',
 		properties: props
 	});

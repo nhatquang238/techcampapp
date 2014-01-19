@@ -189,14 +189,30 @@ content.dragger.on(Events.DragEnd, function () {
 // animation: switch to schedule
 slideTalkRight = function (talk) {
 	talk.animateDefault({
-		x: talk.originalFrame.x+talk.width
+		x: talk.x+talk.width
 	});
 }
 slideDownTalk = function (talks, object) {
 	for (var i = talks.length - 1; i >= 0; i--) {
 		talks[i].animate({
 			properties: {
-				y: talks[i].originalFrame.y + object.height
+				y: talks[i].y + object.height
+			},
+			time: 500,
+			curve: "ease-out"
+		});
+	};
+}
+slideTalkLeft = function (talk) {
+	talk.animateDefault({
+		x: talk.x-talk.width
+	});
+}
+slideUpTalk = function (talks, object) {
+	for (var i = talks.length - 1; i >= 0; i--) {
+		talks[i].animate({
+			properties: {
+				y: talks[i].y - object.height
 			},
 			time: 500,
 			curve: "ease-out"
@@ -204,8 +220,54 @@ slideDownTalk = function (talks, object) {
 	};
 }
 
-switchView.on('click', function () {
-	saveTalk3.visibile = false;
+switchBtn = new View({
+	x: votingBtn.originalFrame.x,
+	y: votingBtn.originalFrame.y,
+	width: 200,
+	height: 60
+});
+switchBtn.originalFrame = switchBtn.frame;
+switchBtn.superView = switchView;
+
+switchBtn.style = {
+	"background":"#fff",
+	"border-top-left-radius":"12px",
+	"border-bottom-left-radius":"12px"
+}
+
+votingActive.visible = true;
+votingActive.style = {
+	"z-index": "5"
+}
+
+// animation: when clicking on schedule button, reveal schedule talks
+scheduleBtn.on('click', function () {
+	// slide the switch button
+	switchBtn.animateDefault({
+		width: switchBtn.originalFrame.width*2
+	});
+	utils.delay(100, function () {
+		votingActive.visible = false;
+		scheduleActive.visible = true;
+		scheduleActive.style = {
+			"z-index": "5"
+		};
+	});
+	utils.delay(200, function () {
+		switchBtn.animateDefault({
+			x: switchBtn.originalFrame.x + switchBtn.originalFrame.width,
+			width: switchBtn.originalFrame.width
+		});
+	})
+	switchBtn.style = {
+		"border-top-left-radius":"0px",
+		"border-bottom-left-radius":"0px",
+		"border-top-right-radius":"12px",
+		"border-bottom-right-radius":"12px"
+	}
+
+	// slide talks right
+	saveTalk3.visible = false;
 	slideTalkRight(talk1);
 	utils.delay(100, function () {
 		slideTalkRight(talk2);
@@ -234,5 +296,63 @@ switchView.on('click', function () {
 		});
 		slideDownTalk([talk1full, talk2full, talk3full], timeline);
 	});
+});
+
+// animation: when clicking on voting, reveal voting talks
+votingBtn.on('click', function () {
+	// slide the switch button
+	switchBtn.animateDefault({
+		x: switchBtn.originalFrame.x,
+		width: switchBtn.originalFrame.width*2
+	});
+	utils.delay(200, function () {
+		switchBtn.animateDefault({
+			width: switchBtn.originalFrame.width
+		});
+		votingActive.visible = true;
+		scheduleActive.visible = false;
+		votingActive.style = {
+			"z-index": "5"
+		};
+	});
+	switchBtn.style = {
+		"border-top-left-radius":"12px",
+		"border-bottom-left-radius":"12px",
+		"border-top-right-radius":"0px",
+		"border-bottom-right-radius":"0px"
+	}
+
+	// slide talks left
+	timeline.animate({
+		time:200,
+		curve: "ease-out",
+		properties: {
+			opacity: 0,
+			y: timeline.originalFrame.y
+		}
+	});
+	slideUpTalk([talk1full, talk2full, talk3full], timeline);
+	utils.delay(500, function () {
+		slideTalkLeft(talk1full);
+		slideTalkLeft(timeline);
+		utils.delay(100, function () {
+			slideTalkLeft(talk2full);
+		});
+		utils.delay(200, function () {
+			slideTalkLeft(talk3full);
+			slideTalkLeft(talk1);
+		});
+		utils.delay(300, function () {
+			slideTalkLeft(talk2);
+		});
+		utils.delay(400, function () {
+			slideTalkLeft(talk3);
+		});
+		utils.delay(500, function () {
+			slideTalkLeft(talk4);
+			timeline.opacity = 1;
+		});
+	});
+
 });
 

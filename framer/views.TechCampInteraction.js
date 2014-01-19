@@ -192,28 +192,7 @@ window.FramerPS['TechCampInteraction'] = [
                 "children": []
               },
               {
-                "name": "voting",
-                "layerFrame": {
-                  "x": 824,
-                  "y": 58,
-                  "width": 75,
-                  "height": 34
-                },
-                "maskFrame": null,
-                "image": {
-                  "path": "images/voting.png",
-                  "frame": {
-                    "x": 824,
-                    "y": 58,
-                    "width": 75,
-                    "height": 34
-                  }
-                },
-                "imageType": "png",
-                "children": []
-              },
-              {
-                "name": "votingBg",
+                "name": "votingBtn",
                 "layerFrame": {
                   "x": 761,
                   "y": 45,
@@ -221,41 +200,53 @@ window.FramerPS['TechCampInteraction'] = [
                   "height": 60
                 },
                 "maskFrame": null,
-                "image": {
-                  "path": "images/votingBg.png",
-                  "frame": {
-                    "x": 761,
-                    "y": 45,
-                    "width": 200,
-                    "height": 60
+                "children": [
+                  {
+                    "name": "voting",
+                    "layerFrame": {
+                      "x": 824,
+                      "y": 58,
+                      "width": 75,
+                      "height": 34
+                    },
+                    "maskFrame": null,
+                    "image": {
+                      "path": "images/voting.png",
+                      "frame": {
+                        "x": 824,
+                        "y": 58,
+                        "width": 75,
+                        "height": 34
+                      }
+                    },
+                    "imageType": "png",
+                    "children": []
+                  },
+                  {
+                    "name": "votingBg",
+                    "layerFrame": {
+                      "x": 761,
+                      "y": 45,
+                      "width": 200,
+                      "height": 60
+                    },
+                    "maskFrame": null,
+                    "image": {
+                      "path": "images/votingBg.png",
+                      "frame": {
+                        "x": 761,
+                        "y": 45,
+                        "width": 200,
+                        "height": 60
+                      }
+                    },
+                    "imageType": "png",
+                    "children": []
                   }
-                },
-                "imageType": "png",
-                "children": []
+                ]
               },
               {
-                "name": "schedule",
-                "layerFrame": {
-                  "x": 1002.5,
-                  "y": 58,
-                  "width": 113,
-                  "height": 34
-                },
-                "maskFrame": null,
-                "image": {
-                  "path": "images/schedule.png",
-                  "frame": {
-                    "x": 1002.5,
-                    "y": 58,
-                    "width": 113,
-                    "height": 34
-                  }
-                },
-                "imageType": "png",
-                "children": []
-              },
-              {
-                "name": "scheduleBg",
+                "name": "scheduleBtn",
                 "layerFrame": {
                   "x": 959,
                   "y": 45,
@@ -263,17 +254,50 @@ window.FramerPS['TechCampInteraction'] = [
                   "height": 60
                 },
                 "maskFrame": null,
-                "image": {
-                  "path": "images/scheduleBg.png",
-                  "frame": {
-                    "x": 959,
-                    "y": 45,
-                    "width": 200,
-                    "height": 60
+                "children": [
+                  {
+                    "name": "schedule",
+                    "layerFrame": {
+                      "x": 1002.5,
+                      "y": 58,
+                      "width": 113,
+                      "height": 34
+                    },
+                    "maskFrame": null,
+                    "image": {
+                      "path": "images/schedule.png",
+                      "frame": {
+                        "x": 1002.5,
+                        "y": 58,
+                        "width": 113,
+                        "height": 34
+                      }
+                    },
+                    "imageType": "png",
+                    "children": []
+                  },
+                  {
+                    "name": "scheduleBg",
+                    "layerFrame": {
+                      "x": 959,
+                      "y": 45,
+                      "width": 200,
+                      "height": 60
+                    },
+                    "maskFrame": null,
+                    "image": {
+                      "path": "images/scheduleBg.png",
+                      "frame": {
+                        "x": 959,
+                        "y": 45,
+                        "width": 200,
+                        "height": 60
+                      }
+                    },
+                    "imageType": "png",
+                    "children": []
                   }
-                },
-                "imageType": "png",
-                "children": []
+                ]
               }
             ]
           }
