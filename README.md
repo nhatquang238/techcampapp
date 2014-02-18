@@ -1,3 +1,4 @@
-#TechcampSaigon app prototype
+techcamp-ios
+=====
 
-Interactive prototype for TechcampSaigon app. Done using framer.js.
+A prototype made with Framer.js for TechcampSaigon 2014
