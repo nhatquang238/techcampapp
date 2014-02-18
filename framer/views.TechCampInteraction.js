@@ -104,39 +104,7 @@ window.FramerPS['TechCampInteraction'] = [
           "height": 120
         },
         "maskFrame": null,
-        "image": {
-          "path": "images/statusBar.png",
-          "frame": {
-            "x": 640,
-            "y": 0,
-            "width": 640,
-            "height": 120
-          }
-        },
-        "imageType": "png",
         "children": [
-          {
-            "name": "SwitchView",
-            "layerFrame": {
-              "x": 761,
-              "y": 45,
-              "width": 398,
-              "height": 60
-            },
-            "maskFrame": null,
-            "image": {
-              "path": "images/SwitchView.png",
-              "frame": {
-                "x": 761,
-                "y": 45,
-                "width": 398,
-                "height": 60
-              }
-            },
-            "imageType": "png",
-            "visible": false,
-            "children": []
-          },
           {
             "name": "switchView",
             "layerFrame": {
@@ -300,6 +268,48 @@ window.FramerPS['TechCampInteraction'] = [
                 ]
               }
             ]
+          },
+          {
+            "name": "statusInfo",
+            "layerFrame": {
+              "x": 653,
+              "y": 2,
+              "width": 616,
+              "height": 48
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/statusInfo.png",
+              "frame": {
+                "x": 653,
+                "y": 2,
+                "width": 616,
+                "height": 48
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
+          {
+            "name": "statusBg",
+            "layerFrame": {
+              "x": 640,
+              "y": 0,
+              "width": 640,
+              "height": 120
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/statusBg.png",
+              "frame": {
+                "x": 640,
+                "y": 0,
+                "width": 640,
+                "height": 120
+              }
+            },
+            "imageType": "png",
+            "children": []
           }
         ]
       },
@@ -570,46 +580,46 @@ window.FramerPS['TechCampInteraction'] = [
             ]
           },
           {
-            "name": "talk3",
+            "name": "saveTalk3",
             "layerFrame": {
               "x": 0,
               "y": 552,
-              "width": 1280,
+              "width": 640,
+              "height": 216
+            },
+            "maskFrame": null,
+            "image": {
+              "path": "images/saveTalk3.png",
+              "frame": {
+                "x": 0,
+                "y": 552,
+                "width": 640,
+                "height": 216
+              }
+            },
+            "imageType": "png",
+            "children": []
+          },
+          {
+            "name": "talk3",
+            "layerFrame": {
+              "x": 640,
+              "y": 552,
+              "width": 640,
               "height": 216
             },
             "maskFrame": null,
             "image": {
               "path": "images/talk3.png",
               "frame": {
-                "x": 0,
+                "x": 640,
                 "y": 552,
-                "width": 1280,
+                "width": 640,
                 "height": 216
               }
             },
             "imageType": "png",
             "children": [
-              {
-                "name": "saveTalk3",
-                "layerFrame": {
-                  "x": 0,
-                  "y": 552,
-                  "width": 640,
-                  "height": 216
-                },
-                "maskFrame": null,
-                "image": {
-                  "path": "images/saveTalk3.png",
-                  "frame": {
-                    "x": 0,
-                    "y": 552,
-                    "width": 640,
-                    "height": 216
-                  }
-                },
-                "imageType": "png",
-                "children": []
-              },
               {
                 "name": "voteBtn3",
                 "layerFrame": {

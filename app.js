@@ -19,14 +19,27 @@ talk3.dragger = new ui.Draggable(talk3);
 // animation for: slide talk to the right to save
 talk3.on(Events.DragMove, function () {
 	talk3.y = talk3.originalFrame.y;
-	saveTalk3.opacity = map_range(talk3.x,0,200,0,1);
+	saveTalk3.x = saveTalk3.originalFrame.x + (talk3.x - talk3.originalFrame.x);
+	saveTalk3.opacity = map_range(talk3.x-talk3.originalFrame.x,0,200,0,1);
 });
 
-talk3.dragger.on(Events.DragEnd, function () {
-	if (talk3.x > 200) {
-		talk3.animateDefault({
-			x: talk3.originalFrame.x + iPhone.frame.width*2
+slideBackToOriginal = function (talks) {
+	for (var i = talks.length - 1; i >= 0; i--) {
+		talks[i].animateDefault({
+			x: talks[i].originalFrame.x
 		});
+	}
+}
+
+talk3.dragger.on(Events.DragEnd, function () {
+	if (talk3.x - talk3.originalFrame.x > 200) {
+		talk3.animateDefault({
+			x: talk3.originalFrame.x + iPhone.width*2
+		});
+		saveTalk3.animateDefault({
+			x: saveTalk3.originalFrame.x + iPhone.width*2
+		});
+
 		utils.delay(200,function () {
 			talk4.animateDefault({
 				y: talk4.originalFrame.y - talk3.height
@@ -36,9 +49,7 @@ talk3.dragger.on(Events.DragEnd, function () {
 			}
 		});
 	} else {
-		talk3.animateDefault({
-			x: talk3.originalFrame.x
-		});
+		slideBackToOriginal([talk3, saveTalk3]);
 	}
 })
 
@@ -165,7 +176,7 @@ hideSearch = function () {
 
 cancelSearch.on('click', hideSearch);
 
-// drag to reveal search bar
+// scroll to reveal search bar
 content.dragger = new ui.Draggable(content);
 
 content.on(Events.DragMove, function () {
@@ -356,3 +367,19 @@ votingBtn.on('click', function () {
 
 });
 
+// page transition
+talk1.style = {
+	"cursor": "pointer"
+};
+
+scaleTalkDown = function (talks) {
+	for (var i = talks.length - 1; i >= 0; i--) {
+		talks[i].animateDefault({
+			scale: 0.95
+		});
+	}
+}
+
+talk1.on('click', function () {
+
+});

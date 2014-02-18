@@ -29,3 +29,31 @@ div[name="talk3"], div[name="searchLabel"],
 div[id="34"], div[name="cancelSearch"],
 div[name="scheduleBtn"], div[name="votingBtn"] {
   cursor: pointer; }
+
+.normal {
+  font-size: 16px;
+  padding: 0.3em 1em;
+  background: #e9b90f;
+  display: inline-block;
+  border-radius: 8px;
+  border: 2px solid #f7f7f7;
+  color: #222;
+  position: absolute;
+}
+
+.switch {
+  top: 70px;
+  left: 10px;
+}
+.vote {
+  top: 150px;
+  left: 530px;
+}
+.swipe {
+  top: 360px;
+  left: 530px;
+}
+.search {
+  top: 90px;
+  left: 530px;
+}
